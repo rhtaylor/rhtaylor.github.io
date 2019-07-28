@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Chain it till you break it "
-date:       2019-07-28 17:18:14 +0000
+date:       2019-07-28 13:18:15 -0400
 permalink:  chain_it_till_you_break_it
 ---
 
@@ -15,4 +15,4 @@ The code looks something like this:
 
  `hash[:nest]["Randy"].sort{ |x,y| y <=> x }.select{ |z| z > 99 }`
  
- So here I am opeing an array in a nested hash named after me, within a nested hash named, wait for it, :nest, within a hash named, you guessed it, hash. I'm sorthing that array. Then I'm selected any values over 100 in that array. That is the idea. I understand that As i wright this it is redundant code in that only using select would have been necessay to get the same value. The idea still stands. I work a full time job and this is my first ever blog post. Take the idea and run with is. I completely love it. 
+ So here I am opeing an array in a nested hash named after me, within a nested hash named, wait for it, :nest, within a hash named, you guessed it, hash. I'm sorthing that array. Then I'm selected any values over 100 in that array. That is the idea. I understand that this is redundant code however the idea still stands. Take it and run with is. I completely love it. 
