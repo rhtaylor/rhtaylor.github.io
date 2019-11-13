@@ -6,14 +6,15 @@ permalink:  try_try_try_again_rails_methods_for_every_problem
 ---
 
  
-****In Ruby there is a method to overcome almost everything. Then there's rails. This is problem solving for everything on steroids.  Every thing. Ev ery th ing. Like getting an unexpected nil for example? That's fairly troublesome in that it can break your program and throw all kinds of errors. In the past I would try to be cleaver and find a way to work around every hitting a nil to avoid throwing an error and breaking the program. I watched a video a few days ago and it had you guessed it: a method for that. 
+**In Ruby there is a method to overcome almost everything. Then there's rails. This is problem solving for everything on steroids.  Every thing. Ev ery th ing. Like getting an unexpected nil for example? That's fairly troublesome in that it can break your program and throw all kinds of errors. In the past I would try to be cleaver and find a way to work around every hitting a nil to avoid throwing an error and breaking the program. I watched a video a few days ago and it had you guessed it: a method for that. 
 
 **Try, try, try again.** The Rails .try method is great because it will check for a nil and then either return what you are looking for or skip over the nil value and continue on. Kind alike when you almost trip but your a ninja and correct and don't fall. Somehow you make almost tripping seem cool.  
 
 **PROBLEM** I had a custome Sinatra MVC app and even put up road blocks to prevent nil values entering the ActiveRecord database. In my experice a nil value will cause you problems. The info was taken from the user via forms. If the form fild was left blank Active Record would assign a nil value upon saving it (sqlite3 database).  
 **CODE** 
+**NOTE** I left this as plain text as in the snippet it renderd the html. Kind cool. Kind Not.  
 
-```<form action="/message/sent" method="POST">
+<form action="/message/sent" method="POST">
 <p>Title:<input type="text" name="title" id="title"></p>
 
 <br><br>
@@ -25,7 +26,7 @@ permalink:  try_try_try_again_rails_methods_for_every_problem
 <input type="hidden" name="user_id" value="<%= @user.id %>">
 <input type="hidden" name="author" value="<%= @user.username %>" checked >By <%=@user.username %><br>
 <input type="submit" id="submit" value="send it">  
-</form>```
+</form>
 
 **Solution 1** I implemented blocks to ensure users would only submit filled out forms in the Controller Action of the message action controls   
 **CODE** 
