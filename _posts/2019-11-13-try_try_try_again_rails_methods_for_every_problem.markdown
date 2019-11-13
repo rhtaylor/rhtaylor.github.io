@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      ".Try .Try .Try again. Rails methods for every problem. "
-date:       2019-11-13 18:27:02 +0000
+date:       2019-11-13 13:27:03 -0500
 permalink:  try_try_try_again_rails_methods_for_every_problem
 ---
 
