@@ -15,7 +15,7 @@ permalink:  try_try_try_again_rails_methods_for_every_problem
 **NOTE** I left this as plain text with * and # as in the html snippet renderd the html as...html. Kinda obvious an html doc will render html. lol
 
 #<*form action="/message/sent" method="POST">
-#<p>Title:<input type="text" name="title" id="title"></p>
+#<p>Title:< #input type="text" name="title" id="title"></p>
 
 #<br><br>
 
