@@ -12,21 +12,21 @@ permalink:  try_try_try_again_rails_methods_for_every_problem
 
 **PROBLEM** I had a custome Sinatra MVC app and even put up road blocks to prevent nil values entering the ActiveRecord database. In my experice a nil value will cause you problems. The info was taken from the user via forms. If the form fild was left blank Active Record would assign a nil value upon saving it (sqlite3 database).  
 **CODE** 
-**NOTE** I left this as plain text as in the snippet it renderd the html. Kinda obvious an html doc will render html. lol
+**NOTE** I left this as plain text with * and # as in the html snippet renderd the html as...html. Kinda obvious an html doc will render html. lol
 
-#<form action="/message/sent" method="POST">
+#<*form action="/message/sent" method="POST">
 #<p>Title:<input type="text" name="title" id="title"></p>
 
 #<br><br>
 
-#<textarea class = "content" name="message" rows="17" cols="27">
+#<*textarea class = "content" name="message" rows="17" cols="27">
 
-#</textarea> 
+#<*/textarea> 
 #<br>
 #<input type="hidden" name="user_id" value="<%= @user.id %>">
 #<input type="hidden" name="author" value="<%= @user.username %>" checked >By <%=@user.username %><br>
 #<input type="submit" id="submit" value="send it">  
-#</form>
+#<*/form>
 
 **Solution 1** I implemented blocks to ensure users would only submit filled out forms in the Controller Action of the message action controls   
 **CODE** 
