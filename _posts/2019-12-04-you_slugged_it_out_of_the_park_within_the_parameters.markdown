@@ -18,7 +18,8 @@ end
 
 ``` 
 
-You just told Rails to use your slug instead of id. If you put rails routes in the rails console you will have 
+You just told Rails to use your slug instead of id. If you put rails routes in the rails console you will have  
+
 ``` 
 #rails console
    Prefix Verb   URI Pattern                    Controller#Action
@@ -36,6 +37,7 @@ edit_article GET    /articles/:slug/edit(.:format) articles#edit
 
 Now we are halfway there. Ruby and ein the model you have to define the slug in the to_params method. 
 Ruby is known for doing things 'under the hood'. Here is a textbook example of this. Rails has many helper methods that allow your stress to decline. When the route helper methods such as link_to and _path are used they take the object in question (user, article, post, thing, etc) and use the to_parma method under the hood grabbing the id. So here we must rewrite the to_param method in the modle as such
+
 ``` 
 #model Article 
  def to_param 
@@ -47,9 +49,11 @@ Ruby is known for doing things 'under the hood'. Here is a textbook example of t
         Article.where('slug' == params['slug']).first
     end
 ``` 
+
 So instead of extracting the id and using it for the route we are creating our custome route that we extrac out of our object. Here I used the title attribue but you can choose whatever you feel is best.  
 
 Finally we can use our action controller to perform some logic and extract things from our database. in the show method I used a custom class method find_by_slug defined in the model to find the article in question 
+
 ``` # ArticleController
  def show 
     @article = Article.find_by_slug(slug: params['title'])
