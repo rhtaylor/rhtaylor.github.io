@@ -39,8 +39,8 @@ edit_article GET    /articles/:slug/edit(.:format) articles#edit
 
 
 
-**Now we are halfway there.** Ruby and ein the model you have to define the slug in the to_params method. 
-Ruby is known for doing things 'under the hood'. Here is a textbook example of this. Rails has many helper methods that allow your stress to decline. When the route helper methods such as link_to and _path are used they take the object in question (user, article, post, thing, etc) and use the to_parma method under the hood grabbing the id. So here we must rewrite the to_param method in the modle as such
+**Now we are halfway there.** Ruby next in the model you have to define the slug in the to_params method. 
+Ruby is known for doing things 'under the hood'. Here is a textbook example of this. Rails has many helper methods that allow your stress to decline. When the route helper methods such as link_to and _path are used they take the object in question (user, article, post, thing, etc) and use the to_parma method under the hood grabbing the id. So here we must rewrite the to_param method in the model as such
 
 ``` 
 #model Article 
